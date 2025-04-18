@@ -3,12 +3,16 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 1rem 4rem;
+  height: 80px;
   justify-content: space-between;
   position: fixed;
   z-index: 2;
   background-color: #e5e5e5;
   width: 100%;
+
+  .menu-icon {
+    display: none;
+  }
 
   .logo {
     display: flex;
@@ -16,6 +20,7 @@ const Wrapper = styled.div`
     font-weight: 900;
     font-size: 1.3rem;
     color: var(--text);
+    margin-left: 1rem;
   }
   img {
     width: 35px;
@@ -26,6 +31,7 @@ const Wrapper = styled.div`
     align-items: center;
     gap: 2rem;
     color: var(--text);
+    margin-right: 1rem;
 
     li {
       font-weight: bold;
@@ -75,28 +81,63 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 700px) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5rem;
-    gap: 1rem;
-
     .logo {
-      width: 100%;
+      margin: 0;
+      font-size: 0.9rem;
     }
-
-    img {
-      height: 35px;
-      width: auto;
-    }
-
     .nav-list {
-      width: 100%;
       display: flex;
-      justify-content: space-between;
-      gap: 0.65rem;
-      li {
-        font-size: 0.85rem;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      right: -400px;
+      height: max-content;
+      gap: 1rem;
+      background-color: var(--blue);
+      margin: 0;
+      width: 250px;
+      color: #fff;
+      align-items: flex-start;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .mobile-menu {
+      right: 0;
+      transition: all 0.4s ease-in-out;
+    }
+
+    li {
+      padding: 1rem;
+      font-weight: 600;
+      border: none;
+      background-color: var(--blue-200);
+      width: 100%;
+      transition: background-color 0.4s ease-in;
+
+      &:hover {
+        border: none;
+        background-color: var(--blue-900);
+        transition: background-color 0.3s ease-in;
+      }
+    }
+    .menu-icon {
+      display: block;
+      color: #000;
+      font-size: 1.4rem;
+      cursor: pointer;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+    }
+
+    .diff {
+      background-color: transparent;
+      border-radius: 0;
+      color: #fff;
+      padding: 0;
+
+      &:hover {
+        background-color: transparent;
       }
     }
   }

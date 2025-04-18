@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Wrapper from "../assets/Navbar";
 import logo from "/logo.png";
-import { FaPhoneAlt } from "react-icons/fa";
+import { BiMenuAltRight } from "react-icons/bi";
 
 function Navbar() {
+  const [mobileClass, setMobileClass] = useState("mobile-menu");
+
+  function toggleNavBar() {
+    mobileClass == "mobile-menu" ? setMobileClass(" ") : setMobileClass("mobile-menu");
+  }
+
   return (
     <Wrapper>
       <div className="logo">
         <img src={logo} alt="" />
         EPJ-PUFO & SONS ENT. LTD
       </div>
-      <ul className="nav-list">
+      <ul className={`nav-list ${mobileClass}`}>
         <li>
           <a href="#">Home</a>
         </li>
@@ -27,6 +33,9 @@ function Navbar() {
           </a>
         </li>
       </ul>
+      <button onClick={toggleNavBar} className="menu-icon">
+        <BiMenuAltRight />
+      </button>
     </Wrapper>
   );
 }

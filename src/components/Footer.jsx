@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="content">
               No.1 Ushie Obi's Compound, <br />
               Ushie Achu's Street, <br />
-              Ebebbank Bekwarra Cross River State <br />
+              Ebegang Bekwarra Cross River State <br />
               Tel: 08130581830, 08093928633 <br />
             </div>
           </div>

@@ -1,5 +1,5 @@
 :root {
-  font-family: "Nunito", serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -10,6 +10,8 @@
   --orange: rgb(212, 117, 0);
   --darkblue: rgb(0, 0, 46);
   --blue: rgb(0, 122, 136);
+  --blue-200: rgb(1, 113, 126);
+  --blue-900: rgb(1, 76, 85);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +28,7 @@ a {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Nunito", serif;
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 

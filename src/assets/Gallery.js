@@ -14,7 +14,6 @@ const Wrapper = styled.div`
     border-radius: 1rem;
     gap: 1rem;
     padding: 1rem;
-    background-color: #fff;
     scrollbar-width: none;
 
     .image {

@@ -35,12 +35,19 @@ const Wrapper = styled.section`
       align-items: center;
       cursor: pointer;
       color: var(--text);
+      gap: 1rem;
     }
 
     .content {
       color: gray;
       transition: 0.35s ease-in-out;
       padding: 1rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .accordion li {
+      font-size: 1rem;
     }
   }
 `;

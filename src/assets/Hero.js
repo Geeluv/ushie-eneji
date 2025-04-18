@@ -9,6 +9,7 @@ const Wrapper = styled.section`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* margin-top: 80px; */
   }
 
   .title {
@@ -16,9 +17,8 @@ const Wrapper = styled.section`
     color: #fff;
     border-radius: 0.5rem;
     padding: 1rem 2rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     width: fit-content;
-    font-weight: 900;
     text-align: center;
     margin: 0 auto;
   }
@@ -26,19 +26,22 @@ const Wrapper = styled.section`
   .overlay {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 80px);
     background-color: var(--overlay);
-    top: 0;
+    top: 80px;
     left: 0;
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   h1 {
     margin-top: 1rem;
-    font-size: 3rem;
+    font-size: 2.7rem;
     text-align: center;
     max-width: 900px;
     line-height: 1.2;
+    font-weight: 600;
   }
 
   .accent {
@@ -51,10 +54,21 @@ const Wrapper = styled.section`
       padding: 0.6rem 1.2rem;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 1.6rem;
       line-height: 1.5;
     }
   }
+
+  /* @media (max-width: 900px) {
+    .title {
+      font-size: 1.2rem;
+      padding: 0.6rem 1.2rem;
+    }
+    h1 {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  } */
 `;
 
 export default Wrapper;
