@@ -4,7 +4,7 @@ import logo from "/logo.png";
 import { BiMenuAltRight } from "react-icons/bi";
 
 function Navbar() {
-  const [mobileClass, setMobileClass] = useState("mobile-menu");
+  const [mobileClass, setMobileClass] = useState("");
 
   function toggleNavBar() {
     mobileClass == "mobile-menu" ? setMobileClass(" ") : setMobileClass("mobile-menu");
